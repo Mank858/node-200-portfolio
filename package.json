@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daniel858espino/portfolio.git"
+    "url": "git+https://github.com/daniel858espino/node-200-portfolio.git"
   },
   "author": "Daniel Espino <daniel858espino@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/daniel858espino/portfolio/issues"
+    "url": "https://github.com/daniel858espino/node-200-portfolioissues"
   },
-  "homepage": "https://github.com/daniel858espino/portfolio#readme",
+  "homepage": "https://github.com/daniel858espino/node-200-portfolio#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "body": "^5.1.0",

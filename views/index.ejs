@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <title> Jakes Portfolio </title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Khula|Kreon" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="portfolio.js"></script>
+</head>
+
+<body>
+
+  <div id="navbar">
+    <a href="#contact">Contact</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About me</a>
+    <a href="#home">Home</a>
+  </div>
+
+  <div id="home" class="bg_parralax main" data-type="background" data-speed="10">
+    <div class='col-md-3 offset-md-4 home-div'>
+      <div class="home-div-2">
+        <h1>
+          <%= person.firstName %>
+            <%= person.lastName %>
+        </h1>
+        <p>Web Developer</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div id="about" class="bg_parralax" data-type="background" data-speed="20">
+      <div class='col-md-8 offset-md-2 about-me-div '>
+        <div class='card'>
+          <p class='card-body'>
+            <h3>About me</h3>
+            Hi, my name is Jake. I am a aspiring junior developer. I currently am a student at Origin Code Academy in San Diego, CA.
+            when I'm not coding I'm either outdoors taking photos, playing my ukulele or building models. Thank you for visiting my portfolio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="projects" class="bg_parralax" data-type="background" data-speed="40">
+      <div class='col-md-10 offset-md-1 formatting'>
+        <div class='projectBackdrop'>
+          <h3 class='projectText'>Projects</h3>
+          <p class='projectText'>Here are some of the project I've made</p>
+        </div>
+
+        <div class='cardHousing'>
+          <div class='card'>
+            <img class="card-img-top" src="/images/vstda.png" alt="">
+            <div class="card-body">
+              <p class="card-text">Very Simple Todo App</p>
+              <a href="https://dje-react-vstda.herokuapp.com/" class="btn btn-info" role="button">click</a>
+            </div>
+          </div>
+
+          <div class='card'>
+            <img class="card-img-top" src="/images/change calculator.png" alt="">
+            <div class="card-body">
+              <p class="card-text">Change Calculator</p>
+              <a href="https://dje-react-change-calculator.herokuapp.com/" class="btn btn-info" role="button">click</a>
+            </div>
+          </div>
+
+          <div class='card'>
+            <img class="card-img-top" src="/images/san diego top spots.png" alt="">
+            <div class="card-body">
+              <p class="card-text">San Diego Top Spots</p>
+              <a href="https://dje-react-san-diego-top-spots.herokuapp.com/" class="btn btn-info" role="button">click</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="contact" class="bg_parralax" data-type="background" data-speed="80">
+      <div class='contact'>
+        <div class="col-md-8 offset-md-2">
+
+          <div class='card'>
+
+            <form action="/thanks" method="POST">
+              <label for="firstName">First Name:</label>
+              <input id="firstName" name="firstName" type="text">
+              
+              <label for="lastName">Last Name:</label>
+              <input id="lastName" name="lastName" type="text">
+              
+              <label for="email">Email:</label>
+              <input id="email" name="email" type="text" placeholder="Email">
+              
+              <input type="submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

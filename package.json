@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel858espino/portfolio.git"
+  },
+  "author": "Daniel Espino <daniel858espino@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daniel858espino/portfolio/issues"
+  },
+  "homepage": "https://github.com/daniel858espino/portfolio#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body": "^5.1.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mailchimp-api-v3": "^1.12.0",
+    "morgan": "^1.9.0",
+    "parser": "^0.1.4"
+  },
+  "devDependencies": {
+    "webpack-config": "^7.5.0"
+  }
+}

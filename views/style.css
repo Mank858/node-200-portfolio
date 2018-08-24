@@ -85,7 +85,7 @@
 }
 #contact {
 
-  background: url("/images/DSCF2474.jpg");
+  background: url("/images/DSCF2474-min.jpg");
   background-attachment: fixed;
   background-origin: initial;
   background-clip: initial;
@@ -135,15 +135,9 @@ text-align:center;
 .contact {
   padding-top: 300px;
   text-align: center;
+  width: 362px;
 }
 
-#lastName {
-  margin-right:100px;
-}
-
-#firstName {
-  margin-right:50px;
-}
 
 .card-body {
   padding: 0 !important
@@ -185,6 +179,9 @@ label {
    width: 940px;
 }
 
+from {
+display:flex;
+}
 /*  for h1 on home  
         and on p tag below
 

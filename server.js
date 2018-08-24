@@ -2,18 +2,23 @@ const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 var profile = require('./profile')
+// var axios = require('axios')
+require('dotenv').config()
 
 var Mailchimp = require('mailchimp-api-v3')
 
-var mailchimp = new Mailchimp('fa302eb8025e86db08b2851aaf63aa48-us19')
+var mailchimp = new Mailchimp(process.env.API_KEY)
 const app = express()
 
-app.use(morgan('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/views'));
 
-app.use('/profile', profile);
+app.use(morgan('dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(__dirname + '/views'))
+
+// ...
+// then define the route that will use your custom router
+app.use('/profile', profile)
 
 app.set('views', './views');
 
@@ -27,21 +32,33 @@ const data = {
 }
 app.get('/', (req, res) => {
   res.render('index', data);
+
+  // res.render('contact');
+
+  
+  //res.render('contact');
 });
 
 app.post('/thanks', (req, res) => {
   
-  mailchimp.post('/lists/68253a4058/members', {
+  mailchimp.post('/lists/f30b32da58/members', {
     email_address : req.body.email,
     status : 'subscribed'
   })
-  .then((resp) => {
+  .then((response) => {
     res.render('thanks', { contact: req.body })
-  }).catch(err => res.send('you are already a member'));
+    //console.log('Terms from MailChimp API', res);
+    //  res.render({
+    //    contact: req.body
+    // //   // person:  {firstName: 'Jake',
+    // //   // lastName: 'Espino'}
+    //  })
+  }).catch(err => res.status(400).send(err.message));
   
-});
+  
+})
 app.get('/contact', (req, res) => {
-  
+
 });
 
 app.listen(8080, () => {
